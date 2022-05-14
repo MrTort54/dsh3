@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            width: 100%;
+            height: 1200px;
+            display: flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            flex-direction: row;
+            background-color: #EBF1FF;
+        }
+        .menu{
+            width: 16%;
+            height: 100%;
+            background: #fff;
+        }
+        .dash{
+            width: 84%;
+            height: 100%;
+            background-color: #F5F5F5;
+        }
+        .header{
+            width: 100%;
+            height: 8%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pageB{
+            width: 100%;
+            height: 92%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .pageT{
+            width: 95%;
+            height: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+        .list{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .n1{
+            height: 12%;
+        }
+        .n2{
+            height: 46%;
+        }
+        .n3{
+            height: 36%;
+        }
+
+        .paid{
+            width: 23%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+            display: flex;
+            justify-content:center ;
+
+        }
+
+        .Latest{
+            width: 74.6%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .Statistics{
+            width: 23%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 20px;
+
+        }
+        .activity{
+            width: 32%;
+            height: 100%;
+
+        }
+        .duable{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .details{
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        .card{
+            width: 100%;
+            height: 66%;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        .transactions{
+            width: 100%;
+            height: 26%;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+
+        .menuFix{
+            width: 16%;
+            height: 64vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            position: fixed;
+        }
+        .pelio{
+            width: 200px;
+            height: 80px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .workBtns{
+            width: 200px;
+            height: 380px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .logo{
+            width: 42px;
+            height: 46px;
+            background-image: url(Group\ 3.png);
+            background-size: cover;
+            margin-right: 10px;
+        }
+        .logotxt{
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px;
+            color: #0E6EFF;
+
+        }
+        .btn{
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: monospace;
+            color: #72757A;
+            font-size: 16px;
+            cursor: pointer;
+            
+        }
+        .minilogo{
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            margin: 0 10px
+        }
+
+        .f1{
+            background-image: url(Vector.png);
+        }
+        .f2{
+            background-image: url(walet.png);
+        }
+        .f3{
+            background-image: url(card.png);
+            height: 15px;
+        }
+        .f4{
+            background-image: url(receipt.png);
+        }
+        .f5{
+            background-image: url(settings\ 1.png);
+        }
+        .f6{
+            background-image: url(transaction\ 1.png);
+        }
+
+        .m1{
+            background-color: #0E6EFF;
+            color: #fff;
+        }
+
+
+        .headerMini{
+            width: 95%;
+            height: 70%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .dashdiv{
+            width: 20%;
+            height: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .shearchdiv{
+            width: 30%;
+            height: 70%;
+            background-color: #fff;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .acountuse{
+            width: 32%;
+            height: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            
+        }
+
+        .logodash{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+
+        }
+
+        .shearch{
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: #72757A;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            
+        }
+        .look{
+            width: 20px;
+            height: 20px;
+            background-image: url(look.png);
+            background-size: cover;
+        }
+        .box{
+            width: 8px;
+            height: 8px;
+            border-radius: 2px;
+            background-color: rgb(0, 0, 0);
+        }
+        .row{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .r1{
+            align-items: flex-start;
+        }
+        .r2{
+            align-items: flex-end;
+        }
+        .dashtxt{
+            font-size: 34px;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+
+        .bell{
+            width: 20px;
+            height: 20px;
+            background-image: url(bell\ 1.png);
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+        }
+        .number{
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            border: 2px solid #F5F5F5;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            margin-top: -10px;
+            font-size: 10px;
+            
+        }
+        .email{
+            width: 20px;
+            height: 20px;
+            background-image: url(email\ 1.png);
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+        }
+        .y1{
+            background-color:#FF684D ;
+
+        }
+        .y2{
+            background-color:#FFBF26 ;
+            width: 25px;
+
+        }
+
+        .foto{
+            width: 50px;
+            height: 50px;
+            background-image: url(Rectangle\ 14.png);
+            background-size: cover;
+            margin-right: 10px;
+        }
+        .userInfo{
+            width: 280px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+        .info{
+            width: 150px;
+            height: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-right: 20%;
+
+        }
+
+        .emailAdres{
+            color: #72757A;
+            font-size: 12px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .UserName{
+            font-size: 20px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .arrow{
+            width: 10px;
+            height: 10px;
+            background-image: url(down-filled-triangular-arrow\ 1.png);
+            background-size: cover;
+        }
+
+        .Un1{
+            background-color:#03B664 ;
+        }
+        .Un2{
+            background-color:#01BEFF ;
+        }
+        .Un3{
+            background-color:#FFBF26 ;
+        }
+        .Un4{
+            background-color:#FF684D ;
+        }
+
+        .stat{
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+
+        }
+        .circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+            margin-left: 200px;
+            position: absolute;
+        }
+        .poster{
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .block{
+            width: 80%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .blockNumber{
+            width: 100%;
+            height: 40%;
+            color: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 24px;
+        }
+        .blockName{
+            width: 100%;
+            height: 40%;
+            color: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .p1{
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-image: url(invoice.png);
+        }
+        .p2{
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-image: url(check.png);
+        }
+        .p3{
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-image: url(close\ 1.png);
+        }
+        .p4{
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            background-image: url(invo.png);
+        }
+        .LatestTransactions{
+            width: 96%;
+            height: 12%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 24px;
+
+        }
+        .mybizebs{
+            width: 96%;
+            height: 64%;
+        }
+        .twoline{
+            width: 96%;
+            height: 16%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .fightclub{
+            width: 100%;
+            height: 25%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .company{
+            width: 36%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+        .amout{
+            width: 24%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+        .min{
+            width: 10%;
+            height: 100%;
+
+        }
+        .printdiv{
+            width: 18%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        .recover{
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            margin-right: 10px;
+            
+        }
+        .rec1{
+            background-color: #01BEFF;
+        }
+        .rec2{
+            background-color: #FFBF26;
+        }
+        .rec3{
+            background-color: #FF684D;
+        }
+        .rec4{
+            background-color: #00D171;
+        }
+
+        .codelink{
+            width: 100%;
+            height: 50%;
+            color: #0E6EFF;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+        }
+        .codename{
+            width: 100%;
+            height: 50%;
+            font-size: 20px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .cup{
+            width: 100%;
+            height: 50%;
+            font-size: 18px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .amountSt{
+            width: 100%;
+            height: 50%;
+            font-size: 14px;
+            font-family: 'DM Sans', sans-serif;
+            color: #72757A;
+        }
+        .min{
+            color: #A9AFB8;
+            font-family: 'DM Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+        .edit{
+            width: 20%;
+            height: 40%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .print{
+            width: 30px;
+            height: 30px;
+            background-image: url(printer\ 1.png);
+            background-size: cover;
+
+        }
+        .colo{
+            width: 6px;
+            height: 6px;
+            background-color: #A9AFB8;
+            border-radius: 10px;
+        }
+        .job1{
+            width: 40px;
+            height: 40px;
+            background-color: rgb(1, 190, 255,0.1);
+            border-radius: 10px;
+        }
+        .job2{
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 186, 20,0.1);
+            border-radius: 10px;
+        }
+        .job3{
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 104, 77, 0.1);
+            border-radius: 10px;
+        }
+        .job4{
+            width: 40px;
+            height: 40px;
+            background-color: rgba(3, 182, 101, 0.1);
+            border-radius: 10px;
+        }
+        .p5{
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            background-image: url(blue.png);
+        }
+        .p6{
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            background-image: url(yellow.png);
+        }
+        .p7{
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            background-image: url(red.png);
+        }
+        .p8{
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            background-image: url(green.png);
+        }
+
+        .showwing{
+            width: 200px;
+            height: 80%;
+            color: #A9AFB8;
+            font-family: 'DM Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .scroldiv{
+            width: 300px;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .scrol{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #A9AFB8;
+            border-radius: 10px;
+            color: #A9AFB8;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .sr2{
+            box-shadow: 0px 0px 5px 5px #0e6eff20;
+            background-color: #0E6EFF;
+            color: #fff;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="menu">
+            <div class="menuFix">
+                <div class="pelio">
+                    <div class="logo"></div>
+                    <h1 class="logotxt">PELIO</h1>
+                </div>
+                <div class="workBtns">
+                    <div class="btn m1">
+                        <div class="minilogo f1"></div>Dashboard</div>
+                    <div class="btn m2">
+                        <div class="minilogo f2"></div>My Wallet</div>
+                    <div class="btn m3">
+                        <div class="minilogo f3"></div>Payment</div>
+                    <div class="btn m4">
+                        <div class="minilogo f4"></div>Invoice</div>
+                    <div class="btn m5">
+                        <div class="minilogo f5"></div>Setting</div>
+                    <div class="btn m6">
+                        <div class="minilogo f6"></div>Transactions</div>
+                </div>
+            </div>
+        </div>
+        <div class="dash">
+            <div class="header">
+                <div class="headerMini">
+                    <div class="dashdiv">
+                        <div class="logodash">
+                            <div class="row r1">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                            <div class="row r2">
+                                <div class="box"></div>
+                                <div class="box"></div>
+                            </div>
+                        </div>
+                        <h2 class="dashtxt">Dashboard</h2>
+                    </div>
+                    <div class="shearchdiv">
+                        <div class="shearch">Search Here...</div>
+                        <div class="look"></div>
+
+                    </div>
+                    <div class="acountuse">
+                        <div class="bell">
+                            <div class="number y1">3</div>
+                        </div>
+                        <div class="email">
+                            <div class="number y2">23</div>
+                        </div>
+                        <div class="userInfo">
+                            <div class="foto"></div>
+                            <div class="info">
+                                <div class="UserName">Hi Shamim</div>
+                                <div class="emailAdres">engshamim@gmail.com</div>
+                            </div>
+                            <div class="arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pageB">
+                <div class="pageT">
+                    <div class="list n1">
+                        <div class="Un1 paid ">
+                            <div class="stat">
+                                <div class="poster ">
+                                    <div class="p1"></div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockNumber">32,568</div>
+                                    <div class="blockName">Total Invoices</div>
+                                </div>
+                            </div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="Un2 paid">
+                            <div class="stat">
+                                <div class="poster ">
+                                    <div class="p2"></div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockNumber">8,558</div>
+                                    <div class="blockName">Paid Invoices</div>
+                                </div>
+                            </div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="Un3 paid">
+                            <div class="stat">
+                                <div class="poster ">
+                                    <div class="p3"></div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockNumber">2,568</div>
+                                    <div class="blockName">Unpaid Invoices</div>
+                                </div>
+                            </div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="Un4 paid">
+                            <div class="stat">
+                                <div class="poster ">
+                                    <div class="p4"></div>
+                                </div>
+                                <div class="block">
+                                    <div class="blockNumber">668</div>
+                                    <div class="blockName">Total Invoices Sent</div>
+                                </div>
+                            </div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="list n2">
+                        <div class="Latest">
+                            <div class="LatestTransactions">Latest Transactions</div>
+                            <div class="mybizebs">
+                                <div class="fightclub fight1">
+                                    <div class="company">
+                                        <div class="recover rec1"></div>
+                                        <div class="block">
+                                            <div class="codelink">#KLA-237-393-950</div>
+                                            <div class="codename">CodeAstrology.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="amout">
+                                        <div class="poster job1">
+                                            <div class="p5"></div>
+                                        </div>
+                                        <div class="block aplication">
+                                            <div class="amountSt">Amount</div>
+                                            <div class="cup">$ 4,67,859</div>
+                                        </div>
+                                    </div>
+                                    <div class="min">5 min ago</div>
+                                    <div class="printdiv">
+                                        <div class="print"></div>
+                                        <div class="edit">
+                                            <div class="colo"></div>
+                                            <div class="colo"></div>
+                                            <div class="colo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fightclub fight2">
+                                    <div class="company">
+                                        <div class="recover rec2"></div>
+                                        <div class="block">
+                                            <div class="codelink">#KLA-237-393-950</div>
+                                            <div class="codename">HSJ Express.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="amout">
+                                        <div class="poster job2">
+                                            <div class="p6"></div>
+                                        </div>
+                                        <div class="block aplication">
+                                            <div class="amountSt">Amount</div>
+                                            <div class="cup">$89,859</div>
+                                        </div>
+                                    </div>
+                                    <div class="min">5 min ago</div>
+                                    <div class="printdiv">
+                                        <div class="print"></div>
+                                        <div class="edit">
+                                            <div class="colo"></div>
+                                            <div class="colo"></div>
+                                            <div class="colo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fightclub fight3">
+                                    <div class="company">
+                                        <div class="recover rec3"></div>
+                                        <div class="block">
+                                            <div class="codelink">#KLA-237-393-950</div>
+                                            <div class="codename">Inventiveshamim.Inc</div>
+                                        </div>
+                                    </div>
+                                    <div class="amout">
+                                        <div class="poster job3">
+                                            <div class="p7"></div>
+                                        </div>
+                                        <div class="block aplication">
+                                            <div class="amountSt">Amount</div>
+                                            <div class="cup">$ 3,43,67,859</div>
+                                        </div>
+                                    </div>
+                                    <div class="min">5 min ago</div>
+                                    <div class="printdiv">
+                                        <div class="print"></div>
+                                        <div class="edit">
+                                            <div class="colo"></div>
+                                            <div class="colo"></div>
+                                            <div class="colo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fightclub fight4">
+                                    <div class="company">
+                                        <div class="recover rec4"></div>
+                                        <div class="block">
+                                            <div class="codelink">#KLA-237-393-950</div>
+                                            <div class="codename">Avadaforlife.Inc</div>
+                                        </div>
+                                    </div>
+                                    <div class="amout">
+                                        <div class="poster job4">
+                                            <div class="p8"></div>
+                                        </div>
+                                        <div class="block aplication">
+                                            <div class="amountSt">Amount</div>
+                                            <div class="cup">$ 2,07,859</div>
+                                        </div>
+                                    </div>
+                                    <div class="min">5 min ago</div>
+                                    <div class="printdiv">
+                                        <div class="print"></div>
+                                        <div class="edit">
+                                            <div class="colo"></div>
+                                            <div class="colo"></div>
+                                            <div class="colo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="twoline">
+                                <div class="showwing">
+                                    Showing 1-4 from 60 Data
+                                </div>
+                                <div class="scroldiv">
+                                    <div class="scrol sr1"><</div>
+                                    <div class="scrol sr2">1</div>
+                                    <div class="scrol sr3">2</div>
+                                    <div class="scrol sr4">3</div>
+                                    <div class="scrol sr5">></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="Statistics"></div>
+                    </div>
+                    <div class="list n3">
+                        <div class="activity duable">
+                            <div class="card"></div>
+                            <div class="transactions"></div>
+                        </div>
+                        <div class="activity details"></div>
+                        <div class="activity details"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>
